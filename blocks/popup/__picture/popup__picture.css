@@ -1,0 +1,16 @@
+.popup__picture {
+    width: 430px;
+    height: 330px;
+    max-width: 80vw;
+    max-height: 80vh;
+    border-radius: 10px;
+    
+    
+}
+
+@media screen and (max-width: 540px) {
+    .popup__picture {
+      width: calc(100% - 60px);
+    }
+  }
+  
