@@ -4,7 +4,7 @@
 
 ## V0.0.1
 
-[Демо](https://mlenizyaka.github.io/Mesto_Webpack.github.io/)
+[Демо](https://mlenizyaka.github.io/Mesto_Webpack/)
 
 В проекте реализованы следующие функции, а иначе тут можно:
 - изменить имя и подпись пользователя
