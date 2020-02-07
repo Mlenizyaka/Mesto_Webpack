@@ -32,10 +32,11 @@ const popupImage = new PopupImage(document.querySelector('.popup_type_picture'))
 
 const popupEditUserpic = new PopupEditUserpic(document.querySelector('.popup_type_edit-userpic'), validation);
 
+const serverUrl = NODE_ENV === 'development' ? 'http://praktikum.tk':'https://praktikum.tk';
 
 const api = new Api({
-  address: 'http://95.216.175.5',
-  groupId: `cohort6`,
+  address: serverUrl,
+  groupId: 'cohort6',
   token: `730bf123-865a-4e15-9fe2-146cc3f3cc14`,
 });
 
