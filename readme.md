@@ -2,7 +2,7 @@
 
 ### Проект собран при помощи Webpack
 
-## V0.0.1
+## V0.0.2
 
 [Демо](https://mlenizyaka.github.io/Mesto_Webpack/)
 
