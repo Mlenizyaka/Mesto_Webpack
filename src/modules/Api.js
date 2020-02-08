@@ -1,3 +1,6 @@
+import {renderLoadingEdit} from "../modules/PopupEdit";
+import {renderLoadingAddCard} from "../modules/PopupAddCard";
+import {renderLoadingUserpic} from "../modules/PopupEditUserpic";
 
 export default class Api {
     
@@ -129,7 +132,7 @@ export default class Api {
     }
 
     // удаляет карточку с сервера (не доделано)
-    deleteCard(cardId) {
+    /* deleteCard(cardId) {
         return fetch(`${this.address}/${this.groupId}/cards/${cardId}`, {
             method: 'DELETE',
             headers: {
@@ -145,5 +148,5 @@ export default class Api {
         .catch((err) => {
             window.alert(`Удаление не выполнено! ${err}`);
         })
-    }
+    } */
 }

@@ -1,4 +1,5 @@
 import Popup from "../modules/Popup";
+import {api} from "../index";
 
 class PopupEdit extends Popup {
     constructor(container, validation) {
@@ -47,5 +48,16 @@ class PopupEdit extends Popup {
 
   }
 
+// отображает загрузку при изменении профиля
+export function renderLoadingEdit(isLoading) {
+  if (isLoading) {
+    document.querySelector('.popup__button_edit').textContent = 'Загрузка...'
+  } else {
+    document.querySelector('.popup__button_edit').textContent = 'Сохранить'
+  }
+}
+
+  
 export {PopupEdit};
+
 

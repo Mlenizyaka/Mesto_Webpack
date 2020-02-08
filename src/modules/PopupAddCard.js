@@ -1,4 +1,6 @@
 import Popup from "../modules/Popup";
+import {api} from "../index";
+
 
 class PopupAddCard extends Popup {
     constructor(container, validation, cardList) {
@@ -40,4 +42,14 @@ class PopupAddCard extends Popup {
     }
   }
 
-  export {PopupAddCard}; 
+   // отображает загрузку при добавлении карточки
+export function renderLoadingAddCard(isLoading) {
+  if (isLoading) {
+    document.querySelector('.popup__button_add').textContent = 'Загрузка...'
+  } else {
+    document.querySelector('.popup__button_add').textContent = '+'
+  }
+} 
+
+export {PopupAddCard}; 
+

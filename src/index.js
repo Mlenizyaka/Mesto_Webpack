@@ -108,31 +108,7 @@ popupEditUserpic.form.addEventListener('submit', e => {
 })
 
 
+export {api};
 
-// отображает загрузку при изменении профиля
-function renderLoadingEdit(isLoading) {
-  if (isLoading) {
-    document.querySelector('.popup__button_edit').textContent = 'Загрузка...'
-  } else {
-    document.querySelector('.popup__button_edit').textContent = 'Сохранить'
-  }
-}
 
-// отображает загрузку при добавлении карточки
-function renderLoadingAddCard(isLoading) {
-  if (isLoading) {
-    document.querySelector('.popup__button_add').textContent = 'Загрузка...'
-  } else {
-    document.querySelector('.popup__button_add').textContent = '+'
-  }
-}
-
-// отображает загрузку при изменении аватара
-function renderLoadingUserpic(isLoading) {
-  if (isLoading) {
-    document.querySelector('.popup__button_edit-userpic').textContent = 'Загрузка...'
-  } else {
-    document.querySelector('.popup__button_edit-userpic').textContent = 'Сохранить'
-  }
-}
 

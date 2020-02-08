@@ -1,4 +1,5 @@
 import Popup from "../modules/Popup";
+import {api} from "../index";
 
 class PopupEditUserpic extends Popup {
     constructor(container, validation) {
@@ -37,5 +38,16 @@ class PopupEditUserpic extends Popup {
       
     }
   }
+
+// отображает загрузку при изменении аватара
+export function renderLoadingUserpic(isLoading) {
+  if (isLoading) {
+    document.querySelector('.popup__button_edit-userpic').textContent = 'Загрузка...'
+  } else {
+    document.querySelector('.popup__button_edit-userpic').textContent = 'Сохранить'
+  }
+}
+
+
 
   export {PopupEditUserpic};
