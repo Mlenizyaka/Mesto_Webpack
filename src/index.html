@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mesto</title>             
   <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.main.css %>"> <!-- файл стилей подключается по хэшу  <%=htmlWebpackPlugin.files.chunks.main.css %> -->
-  <link rel="icon" href="../src/images/favicon.ico" type="image/ico">
+  <link rel="icon" href="<%=require('../src/images/favicon.ico')%>" type="image/ico">
 </head>
 <body>
   <div class="root">

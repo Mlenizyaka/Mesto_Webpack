@@ -7,52 +7,53 @@ const isDev = process.env.NODE_ENV === 'development';
 const webpack = require('webpack');
 
 module.exports = {
-    entry: { main: './src/index.js' },
+    entry: {
+        main: './src/index.js'
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[chunkhash].js'
     },
     module: {
-        rules: [{ 
-                test: /\.js$/, 
+        rules: [{
+                test: /\.js$/,
                 exclude: /node_modules/,
-                use: { 
-                    loader: "babel-loader" 
+                use: {
+                    loader: "babel-loader"
                 }
             },
             {
                 test: /\.css$/i,
                 use: [
-                                (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
-                                'css-loader', 
-                                'postcss-loader'
-                        ]
+                    (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
+                    'css-loader',
+                    'postcss-loader'
+                ]
             },
             {
                 test: /\.(eot|ttf|woff|woff2)$/,
                 loader: 'file-loader',
                 options: {
-                    name: './vendor/[name].[ext]', 
+                    name: './vendor/[name].[ext]',
                 }
             },
             {
                 test: /\.(png|jpg|gif|ico|svg)$/,
-                use: [
-                        {
-                            loader: 'file-loader',
-                            options: {
-                                name: './images/[name].[ext]',
-                                esModule: false
-                            }
-                        },
-                        {
-                            loader: 'image-webpack-loader',
-                            options: {}
-                        },
+                use: [{
+                        loader: 'file-loader',
+                        options: {
+                            name: './images/[name].[ext]',
+                            esModule: false
+                        }
+                    },
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {}
+                    },
                 ]
-         }
-          ]
-        },
+            }
+        ]
+    },
     plugins: [
         new MiniCssExtractPlugin({
             filename: 'style.[contenthash].css'
@@ -61,11 +62,11 @@ module.exports = {
             assetNameRegExp: /\.css$/g,
             cssProcessor: require('cssnano'),
             cssProcessorPluginOptions: {
-                    preset: ['default'],
+                preset: ['default'],
             },
             canPrint: true
         }),
-        new HtmlWebpackPlugin({ 
+        new HtmlWebpackPlugin({
             inject: false,
             template: './src/index.html',
             filename: 'index.html'
